@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import CallBack from "./components/CallBack";
+import Compound from "./components/Compound";
+import DynamicImport from "./components/DynamicImport";
+import Lazy from "./components/Lazy";
+import Memo from "./components/Memo";
+import RenderProps from "./components/RenderProps";
+import Uncontroll from "./components/Uncontroll";
+import UseMemo from "./components/UseMemo";
+
 
 function App() {
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+     <h1>Practise: </h1>
+     <Uncontroll/>
+     <RenderProps render={({x,y})=>{ return <h3> Position: x:{x} , y:{y}</h3>}}/>
+     <Compound/>
+     <Lazy/>
+     <DynamicImport/>
+     <Memo/>
+     <CallBack/>
+     <UseMemo/>
+
     </div>
   );
 }
